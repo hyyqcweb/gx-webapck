@@ -1,0 +1,8 @@
+node_modules
+.idea
+.DS_Store
+.AppleDouble
+.LSOverride
+dist
+package-lock.json
+yarn.lock
