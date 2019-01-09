@@ -37,8 +37,9 @@ module.exports = {
                             ]
                         }
                     },
-                    {  loader: "less-loader" }
-                ]
+                    {  loader: "less-loader", options: { javascriptEnabled: true } }
+                ],
+                include: [/antd/],
             },
             {
                 test: /\.(png|jpg|gif)$/,
