@@ -1,11 +1,5 @@
-import React from "react";
-import ReactDom from "react-dom";
-import { Button } from 'antd';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
-ReactDom.render(
-    <div>
-        <h1>hello, world!</h1>
-        <Button type="primary">Primary</Button>
-    </div>,
-    document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById('root'));

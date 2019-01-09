@@ -22,6 +22,10 @@
     "url-loader": "^1.1.2", // 图片url模块加载
     "file-loader": "^3.0.1", //  file模块加载 比如图片就需要这个file加载
     "webpack-bundle-analyzer": "^3.0.3", // 打包后代码体积分析
+    "cross-env": "^5.2.0", // 跨平台兼容
+    "eslint": "^5.12.0", // eslint
+    "eslint-config-alloy": "^1.4.2", // eslint
+    "eslint-plugin-react": "^7.12.3", // eslint
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2", // 分离css, 避免掺在js里面
