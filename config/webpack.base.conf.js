@@ -48,7 +48,7 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: true,
+                            modules: false, // false -> import styles from 'xxx.less'  true -> import 'xxx.less'
                             sourceMap: true,
                             localIdentName: '[name]__[local]--[hash:base64:5]',
                         },
