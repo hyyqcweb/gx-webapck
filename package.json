@@ -14,7 +14,7 @@
     "dva"
   ],
   "author": "hyyqc",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.4.4",
     "babel-core": "^6.26.3",

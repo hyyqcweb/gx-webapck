@@ -8,7 +8,7 @@
 + es6 / 7
 + react
 + less
-+ webpack
++ webpack4
 
 ### 🚀 公告
 
