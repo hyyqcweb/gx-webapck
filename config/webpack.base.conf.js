@@ -87,5 +87,13 @@ module.exports = {
                 // exclude忽略/node_modules/的文件夹
             }
         ]
+    },
+    resolve: {
+        alias: {
+            Utils: path.resolve(__dirname, '../src/utils'),
+            Components: path.resolve(__dirname, '../src/components'),
+            Models: path.resolve(__dirname, '../src/models'),
+            Services: path.resolve(__dirname, '../src/services'),
+        }
     }
 };

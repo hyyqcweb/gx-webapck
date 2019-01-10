@@ -29,7 +29,7 @@ module.exports = merge(baseWebpackConfig, {
     devServer: {
         port: '3000',
         contentBase: path.join(__dirname, '../public'),
-        compress: true,
+        compress: true, // 启用 gzip
         historyApiFallback: true,
         hot: true, //开启
         https: false,
