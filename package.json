@@ -6,13 +6,10 @@
   "scripts": {
     "dev": "cross-env webpack-dev-server --inline --progress --config config/webpack.dev.conf.js",
     "build": "webpack --config config/webpack.prod.conf.js",
+    "build:new": "node version && webpack --config config/webpack.prod.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react",
-    "webpack4",
-    "dva"
-  ],
+  "keywords": ["react", "webpack4", "dva"],
   "author": "hyyqc",
   "license": "MIT",
   "devDependencies": {
@@ -38,6 +35,7 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
+    "js-beautify": "^1.8.9",
     "webpack": "^4.28.1",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.1",
