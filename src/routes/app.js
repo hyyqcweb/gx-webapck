@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from 'dva'
+import styles from './app.less'
 
 const App = ({app, loading}) => {
     console.log('test',app);
     console.log('test',loading);
     return (
-        <div>
+        <div className={styles.container}>
             hello
         </div>
     )

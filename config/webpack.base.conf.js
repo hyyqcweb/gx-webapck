@@ -37,9 +37,35 @@ module.exports = {
                             ]
                         }
                     },
-                    {  loader: "less-loader", options: { javascriptEnabled: true } }
+                    {  loader: "less-loader", options: { javascriptEnabled: true } },
                 ],
                 include: [/antd/],
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            sourceMap: true,
+                            localIdentName: '[name]__[local]--[hash:base64:5]',
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: [
+                                require('autoprefixer')({
+                                    browsers: ['last 5 version']
+                                })
+                            ]
+                        }
+                    },
+                    { loader: 'less-loader', options: { javascriptEnabled: true } },
+                ],
+                exclude: [/antd/],
             },
             {
                 test: /\.(png|jpg|gif)$/,
