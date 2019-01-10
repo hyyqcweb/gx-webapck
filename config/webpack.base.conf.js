@@ -2,13 +2,14 @@
 const path = require('path'); //node.js自带的路径参数
 const DIST_PATH = path.resolve(__dirname, '../dist'); //生产目录
 const APP_PATH = path.resolve(__dirname, '../src'); //源文件目录
+const {version} = require('../package.json'); // 打包版本号
 
 module.exports = {
     entry: {
         app: './src/index.js',
     },
     output: {
-        filename: 'js/[name].[chunkhash].js', //使用hash进行标记
+        filename: `${version}/[name].[chunkhash].js`, //使用hash进行标记
         path: DIST_PATH
     },
     module: {

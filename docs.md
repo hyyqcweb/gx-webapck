@@ -26,9 +26,10 @@
     "eslint": "^5.12.0", // eslint
     "eslint-config-alloy": "^1.4.2", // eslint
     "eslint-plugin-react": "^7.12.3", // eslint
+    "extract-text-webpack-plugin": "^4.0.0-beta.0", // 分离css, 避免掺在js里面
+    "compression-webpack-plugin": "^2.0.0", // gzip 压缩
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^3.0.2", // 分离css, 避免掺在js里面
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
