@@ -1,8 +1,9 @@
 import React from 'react';
 import {connect} from 'dva'
 
-const App = ({app}) => {
+const App = ({app, loading}) => {
     console.log('test',app);
+    console.log('test',loading);
     return (
         <div>
             hello
