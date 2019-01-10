@@ -15,7 +15,7 @@ module.exports = merge(baseWebpackConfig, {
     plugins: [
         // 处理html
         new HtmlWebpackPlugin({
-            template: 'public/index.html',
+            template: './src/public/index.html',
             inject: 'body',
             minify: {
                 html5: true

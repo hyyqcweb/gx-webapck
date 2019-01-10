@@ -9,7 +9,7 @@ module.exports = merge(baseWebpackConfig, {
     mode: 'production',  //mode是webpack4新增的模式
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'public/index.html',
+            template: './src/public/index.html',
             title: '新版系统', //更改HTML的title的内容
             minify: {
                 removeComments: true,

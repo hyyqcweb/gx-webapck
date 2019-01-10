@@ -6,7 +6,7 @@
     "babel-preset-env": "^1.7.0",  
     "babel-preset-react": "^6.24.1", // react 转码规则
     "babel-plugin-import": "^1.11.0", // antd按需加载样式 
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0", // 解决 dva effects 报错
     "babel-preset-stage-0": "^6.24.1", // es6/7转码
     "webpack": "^4.28.1",
     "webpack-cli": "^3.2.1",
