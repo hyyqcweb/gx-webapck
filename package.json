@@ -10,7 +10,8 @@
   },
   "keywords": [
     "react",
-    "webpack4"
+    "webpack4",
+    "dva"
   ],
   "author": "hyyqc",
   "license": "ISC",
