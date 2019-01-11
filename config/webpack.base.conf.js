@@ -49,7 +49,7 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: false, // false -> import styles from 'xxx.less'  true -> import 'xxx.less'
+                            modules: false, // true -> import styles from 'xxx.less'  false -> import 'xxx.less'
                             sourceMap: true,
                             localIdentName: '[name]__[local]--[hash:base64:5]',
                         },

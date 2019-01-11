@@ -28,6 +28,7 @@
     "eslint-plugin-react": "^7.12.3", // eslint
     "extract-text-webpack-plugin": "^4.0.0-beta.0", // 分离css, 避免掺在js里面
     "compression-webpack-plugin": "^2.0.0", // gzip 压缩
+    "copy-webpack-plugin": "^4.6.0", // 复制文件
   },
   "dependencies": {
     "react": "^16.7.0",

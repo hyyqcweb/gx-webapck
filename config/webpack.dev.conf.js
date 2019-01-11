@@ -35,6 +35,8 @@ module.exports = merge(baseWebpackConfig, {
         https: false,
         noInfo: true,
         open: true,
-        proxy: {}
+        proxy: {
+            // 代理环境
+        }
     }
 });
