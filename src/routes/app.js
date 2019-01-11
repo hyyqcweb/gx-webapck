@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'dva'
 import  './app.less'
 import Header from 'Components'
+import '../public/static/iconfont.less'
 
 const App = ({app, loading}) => {
     console.log('test',app);
@@ -10,6 +11,9 @@ const App = ({app, loading}) => {
         <div className='container'>
             <Header />
             hello
+            <div>
+                <span className="iconfont icon-export" style={{fontSize:50}}/>
+            </div>
         </div>
     )
 };

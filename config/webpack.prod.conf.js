@@ -37,7 +37,7 @@ module.exports = merge(baseWebpackConfig, {
         }),
         new CopyWebpackPlugin([
             {
-                from: './src/public/assets',
+                from: './src/public/static',
                 to: `${DIST_PATH}/static`
             },
         ]),
