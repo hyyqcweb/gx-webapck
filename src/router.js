@@ -1,13 +1,19 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
-import App from './routes/app'
+import PropTypes from 'prop-types';
+import App from './routes/app';
 
-export default ({ history }) => {
-    return (
-        <Router history={history}>
-            <Switch>
-                <Route path="/" exact component={App} />
-            </Switch>
-        </Router>
-    )
-}
+const Routers = ({ history }) => {
+  return (
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact component={App} />
+      </Switch>
+    </Router>
+  );
+};
+Routers.propTypes = {
+  history: PropTypes.object,
+};
+
+export default Routers;

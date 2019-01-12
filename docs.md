@@ -26,6 +26,9 @@
     "eslint": "^5.12.0", // eslint
     "eslint-config-alloy": "^1.4.2", // eslint
     "eslint-plugin-react": "^7.12.3", // eslint
+     "eslint-config-airbnb": "^17.1.0", // eslint
+     "eslint-plugin-jsx-a11y": "^6.1.2", // eslint
+     "eslint-plugin-import": "^2.14.0", // eslint
     "extract-text-webpack-plugin": "^4.0.0-beta.0", // 分离css, 避免掺在js里面
     "compression-webpack-plugin": "^2.0.0", // gzip 压缩
     "copy-webpack-plugin": "^4.6.0", // 复制文件
