@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect} from 'dva'
-import  './app.less'
-import Header from 'Components'
-import 'Static/iconfont.less'
+import {connect} from 'dva';
+import Header from 'Components';
+import  './app.less';
+import 'Static/iconfont.less';
 
 const App = ({app, loading}) => {
     console.log('test',app);
