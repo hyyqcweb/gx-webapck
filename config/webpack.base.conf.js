@@ -111,6 +111,7 @@ module.exports = {
             Components: path.resolve(__dirname, '../src/components'),
             Models: path.resolve(__dirname, '../src/models'),
             Services: path.resolve(__dirname, '../src/services'),
+            Static: path.resolve(__dirname, '../src/public/static'),
         }
     }
 };

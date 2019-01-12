@@ -35,11 +35,11 @@ module.exports = merge(baseWebpackConfig, {
             threshold: 10240,
             minRatio: 0.8
         }),
-        new CopyWebpackPlugin([
-            {
-                from: './src/public/static',
-                to: `${DIST_PATH}/static`
-            },
-        ]),
+        // new CopyWebpackPlugin([
+        //     {
+        //         from: './src/public/static',
+        //         to: `${DIST_PATH}/static`
+        //     },
+        // ]),
     ]
 });

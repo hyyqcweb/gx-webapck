@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'dva'
 import  './app.less'
 import Header from 'Components'
-import '../public/static/iconfont.less'
+import 'Static/iconfont.less'
 
 const App = ({app, loading}) => {
     console.log('test',app);
