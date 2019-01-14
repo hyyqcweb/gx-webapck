@@ -8,13 +8,13 @@ import 'Static/iconfont.less';
 const App = ({ app, loading }) => {
   console.log('test', app);
   console.log('test', loading);
-    return (
+  return (
     <div className="container">
       <Header />
-      <div className='content'>
+      <div className="content">
         hello
         <div>
-          <span className="iconfont icon-export" style={{fontSize: 50}}/>
+          <span className="iconfont icon-export" style={{ fontSize: 50 }} />
         </div>
       </div>
     </div>
