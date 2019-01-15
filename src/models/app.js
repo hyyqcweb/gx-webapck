@@ -1,4 +1,5 @@
 import pathToRegexp from 'path-to-regexp';
+import { getUser } from 'Services/app';
 
 export default {
   namespace: 'app',
@@ -16,9 +17,28 @@ export default {
     },
   },
   effects: {
-    * query () { // {payload}, {call, put}
-      console.log(1);
+    * query () {
+      console.log('默认加载', 1);
+    },
+    * getUser ({ payload }, { call, put }) {
+      const { data, success } = yield call(getUser, payload);
+      if (success) {
+        yield put({
+          type: 'getUserSuccess',
+          payload: {
+            List: data.list,
+          },
+        });
+      }
     },
   },
-  reducers: {},
+  reducers: {
+    getUserSuccess (state, { payload }) {
+      const { List } = payload;
+      return {
+        ...state,
+        List,
+      };
+    },
+  },
 };

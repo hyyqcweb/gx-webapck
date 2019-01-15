@@ -27,8 +27,8 @@ module.exports = merge(baseWebpackConfig, {
     ],
     // 热更新
     devServer: {
-        port: '3000',
-        contentBase: path.join(__dirname, '../public'),
+        port: 3000,
+        contentBase: path.resolve(__dirname, 'public'),
         compress: true, // 启用 gzip
         historyApiFallback: true,
         hot: true, //开启
@@ -36,7 +36,12 @@ module.exports = merge(baseWebpackConfig, {
         noInfo: true,
         open: true,
         proxy: {
-            // 代理环境
+          '/api': {
+              target: 'https://easy-mock.com/mock/5b85f226b6eb682fc7f9ef9d/bicycleApi',
+              pathRewrite: {'^/api' : ''},
+              secure: false,
+              changeOrigin: true
+          },
         }
     }
 });
