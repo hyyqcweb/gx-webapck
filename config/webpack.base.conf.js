@@ -10,7 +10,8 @@ module.exports = {
     },
     output: {
         filename: `${version}/[name].[chunkhash].js`, //使用hash进行标记
-        path: DIST_PATH
+        path: DIST_PATH,
+        publicPath: '/' // 解决多路由错乱
     },
     module: {
         rules: [
