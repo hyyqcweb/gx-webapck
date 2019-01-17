@@ -9,6 +9,7 @@ module.exports = merge(baseWebpackConfig, {
     mode: 'development',
     output: {
         filename: `js/[name].[hash:16].js`,
+        publicPath: '/' // 解决多路由错乱
     },
     // 源错误检查
     devtool: 'inline-source-map',

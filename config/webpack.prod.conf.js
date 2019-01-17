@@ -27,7 +27,7 @@ module.exports = merge(baseWebpackConfig, {
         }),
         new CleanWebpackPlugin(['../dist'], { allowExternal: true }), // 删除dist 文件
         new BundleAnalyzerPlugin(), // 代码体积分析
-        new ExtractTextPlugin(`${version}/[name].[contenthash].css`), // css 分离
+        new ExtractTextPlugin(`${version}/[name].[hash].css`), // css 分离
         new CompressionWebpackPlugin({
             filename: '[path].gz[query]',
             algorithm: 'gzip',
