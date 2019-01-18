@@ -13,11 +13,15 @@ module.exports = {
         path: DIST_PATH,
         publicPath: '/' // 解决多路由错乱
     },
+    stats: {
+        source: true // 增加时间分析
+    },
     module: {
         rules: [
             {
                 test: /\.js?$/,
-                use: "babel-loader",
+                use: "babel-loader?cacheDirectory", // 利用loader作打包缓存
+                exclude: /node_modules/, // 排除库
                 include: APP_PATH
             },
             {
@@ -113,6 +117,7 @@ module.exports = {
             Models: path.resolve(__dirname, '../src/models'),
             Services: path.resolve(__dirname, '../src/services'),
             Static: path.resolve(__dirname, '../src/public/static'),
-        }
+        },
+        extensions: ['.js'] // 解析文件后缀
     }
 };
