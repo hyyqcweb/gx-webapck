@@ -12,7 +12,7 @@ module.exports = merge(baseWebpackConfig, {
         publicPath: '/' // 解决多路由错乱
     },
     // 源错误检查
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     plugins: [
         // 处理html
         new HtmlWebpackPlugin({
@@ -23,6 +23,8 @@ module.exports = merge(baseWebpackConfig, {
             },
             hash: false
         }),
+        // 去除id缓存
+        new webpack.NamedModulesPlugin(),
         // 热更新
         new webpack.HotModuleReplacementPlugin(),
     ],
@@ -36,6 +38,24 @@ module.exports = merge(baseWebpackConfig, {
         https: false,
         noInfo: true,
         open: true,
+        stats: {
+            timings: true,
+            modules: false,
+            assets: false,
+            entrypoints: false,
+            assetsSort: 'field',
+            builtAt: false,
+            cached: false,
+            cachedAssets: false,
+            children: false,
+            chunks: false,
+            chunkGroups: false,
+            chunkModules: false,
+            chunkOrigins: false,
+            performance: true,
+            errors: true,
+            warnings: true,
+        },
         proxy: {
           '/api': {
               target: 'https://easy-mock.com/mock/5b85f226b6eb682fc7f9ef9d/bicycleApi',
