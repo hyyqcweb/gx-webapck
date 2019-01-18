@@ -3,6 +3,10 @@ const path = require('path'); //node.js自带的路径参数
 const DIST_PATH = path.resolve(__dirname, '../dist'); //生产目录
 const APP_PATH = path.resolve(__dirname, '../src'); //源文件目录
 const {version} = require('../package.json'); // 打包版本号
+const HappyPack = require('happypack');
+const os = require('os'); // 系统操作模块
+
+const happyThreadPool = HappyPack.ThreadPool({size: os.cpus().length}); // 由于是多线程, CPU占用很高
 
 module.exports = {
     entry: {
@@ -20,8 +24,8 @@ module.exports = {
         rules: [
             {
                 test: /\.js?$/,
-                use: "babel-loader?cacheDirectory", // 利用loader作打包缓存
-                exclude: /node_modules/, // 排除库
+                use: "happypack/loader?id=babel", // 引入happypack
+                exclude: /node_modules/,
                 include: APP_PATH
             },
             {
@@ -110,6 +114,14 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+      new HappyPack({ // 基础参数设置
+        id: 'babel', // 上面loader?后面指定的id
+        loaders: ['babel-loader?cacheDirectory'], // 实际匹配处理的loader
+        threadPool: happyThreadPool,
+        verbose: true
+      })
+    ],
     resolve: {
         alias: {
             Utils: path.resolve(__dirname, '../src/utils'),

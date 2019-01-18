@@ -66,6 +66,7 @@
     "axios": "^0.18.0",
     "dva": "^2.4.1",
     "dva-loading": "^2.0.6",
+    "happypack": "^5.0.0-beta.4",
     "history": "^4.7.2",
     "path-to-regexp": "^2.4.0",
     "react": "^16.7.0",
