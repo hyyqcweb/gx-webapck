@@ -5,4 +5,5 @@ node_modules
 .LSOverride
 dist
 package-lock.json
+yarn-error.log
 yarn.lock

@@ -1,10 +1,23 @@
 import pathToRegexp from 'path-to-regexp';
 import { getUser } from 'Services/app';
 
+function chooseLocale () {
+  let _val = window.navigator.language.split('_')[0];
+  switch (_val.substring(0, 2)) {
+    case 'en':
+      return 'en_US';
+    case 'zh':
+      return 'zh_CN';
+    default:
+      return 'en_US';
+  }
+}
+
 export default {
   namespace: 'app',
   state: {
     List: [],
+    i18n: `${chooseLocale()}`,
   },
   subscriptions: {
     setup ({ dispatch, history }) {
@@ -31,6 +44,9 @@ export default {
         });
       }
     },
+    * changeLang ({ payload: { value } }, { put }) {
+      yield put({ type: 'updateLang', payload: { value } });
+    },
   },
   reducers: {
     getUserSuccess (state, { payload }) {
@@ -38,6 +54,12 @@ export default {
       return {
         ...state,
         List,
+      };
+    },
+    updateLang (state, { payload: { value } }) {
+      return {
+        ...state,
+        i18n: value,
       };
     },
   },

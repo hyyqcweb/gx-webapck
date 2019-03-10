@@ -30,7 +30,7 @@ module.exports = merge(baseWebpackConfig, {
     ],
     // 热更新
     devServer: {
-        port: 3000,
+        port: 3333,
         contentBase: path.resolve(__dirname, 'public'),
         compress: true, // 启用 gzip
         historyApiFallback: true,

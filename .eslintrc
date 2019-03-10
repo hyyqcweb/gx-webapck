@@ -67,7 +67,10 @@
     "linebreak-style":0,
     "require-yield":0,
     "react/jsx-one-expression-per-line":0,
-    "no-shadow":0
+    "no-shadow":0,
+    "object-curly-newline":0,
+    "no-undef":0,
+    " object-curly-spacing":0
   },
   "parser": "babel-eslint",
   "parserOptions": {

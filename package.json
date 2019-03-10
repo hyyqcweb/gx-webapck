@@ -14,7 +14,8 @@
     "webpack4",
     "dva",
     "roadhog",
-    "antd"
+    "antd",
+    "intl"
   ],
   "author": "hyyqc",
   "license": "MIT",
@@ -68,8 +69,10 @@
     "dva-loading": "^2.0.6",
     "happypack": "^5.0.0-beta.4",
     "history": "^4.7.2",
+    "lodash": "^4.17.11",
     "path-to-regexp": "^2.4.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-intl": "^2.8.0"
   }
 }
