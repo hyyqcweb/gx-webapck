@@ -69,7 +69,7 @@ const App = ({ app, loading, dispatch, intl: { formatMessage } }) => {
 App.propTypes = {
   app: PropTypes.object,
   loading: PropTypes.object,
-  intl: PropTypes.func,
+  intl: PropTypes.object,
   dispatch: PropTypes.func,
 };
 
